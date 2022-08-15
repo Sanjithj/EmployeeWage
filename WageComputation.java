@@ -5,13 +5,16 @@ public class WageComputation {
 		
 		System.out.println("Welcome to Employee wage computation program");
 		
-		int IS_FULL_TIME = 1;
+		int IS_PART_TIME = 1;
+		int IS_FULL_TIME = 2;
 		int EMP_RATE_PER_HRS= 20;
 		int empHrs = 0;
 		int empRate = 0;
 		
 		 double empWage = (int) Math.floor(Math.random() * 10) % 2;   
-	        if (empWage == IS_FULL_TIME)
+	        if (empWage == IS_PART_TIME)
+	        	empHrs = 4;
+	        else if (empWage == IS_FULL_TIME)
 	        	empHrs = 8;
 	        else
 	        	empHrs = 0;
