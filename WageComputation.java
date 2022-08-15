@@ -4,6 +4,7 @@ public class WageComputation {
  	public static final int IS_PART_TIME = 1;
    	public static final int IS_FULL_TIME = 2;
    	public static final int EMP_RATE_PER_HRS= 20;
+   	public static final int NUM_WORKING= 2;
    	
 	public static void main(String[] args) {
 		
@@ -11,7 +12,9 @@ public class WageComputation {
 		
 		int empHrs = 0;
 		int empRate = 0;
+		int totalEmpRate = 0;
 		
+		for(int day=0; day<NUM_WORKING;day++) {
 		int empWage = (int) Math.floor(Math.random() * 10) % 2;   
 	       switch (empWage) {
 	       case IS_PART_TIME:
@@ -24,7 +27,9 @@ public class WageComputation {
 	        	empHrs = 0;
 	       }
 	        empRate = empHrs * EMP_RATE_PER_HRS;
+	        totalEmpRate += empRate;
 	        System.out.println("Emp wage " + empRate);
 	}
-
+			System.out.println("total emp wage" + totalEmpRate);
+}
 }
